@@ -132,6 +132,11 @@ function myFunction() {
 const add = document.querySelector(".add");
 const farm = document.querySelector(".addFarm");
 
+
+// drop down to next page
+
+
+
 function la(src) {
 
     window.location = src;
