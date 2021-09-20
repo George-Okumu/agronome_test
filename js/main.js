@@ -1,4 +1,4 @@
-//Dropdowmn
+ //Dropdowmn
 window.addEventListener('DOMContentLoaded', () => {
         const menuBtn = document.querySelector('#menu-btn')
         const dropdown = document.querySelector('#dropdown')
@@ -131,3 +131,11 @@ function myFunction() {
 //function for showing and hiding the delete field no. button
 const add = document.querySelector(".add");
 const farm = document.querySelector(".addFarm");
+
+// drop down to next page
+
+function la(src) {
+
+    window.location = src;
+
+}
