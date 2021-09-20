@@ -131,3 +131,9 @@ function myFunction() {
 //function for showing and hiding the delete field no. button
 const add = document.querySelector(".add");
 const farm = document.querySelector(".addFarm");
+
+function la(src) {
+
+    window.location = src;
+
+}
