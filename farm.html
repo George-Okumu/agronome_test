@@ -11,7 +11,7 @@
 
 <body>
     <!--========Nav========-->
-    <nav class="bg-green-800 shadow-lg">
+    <nav class="nav_color shadow-lg">
         <div class="max-w-8xl mx-auto px-4">
             <div class="flex justify-between">
                 <div class="flex space-x-7">
@@ -105,7 +105,7 @@
                     <div class="flex justify-between pt-4">
                         <!--Add Farm Button-->
                         <div class="pl-8">
-                            <div class="flex divide-x-2 divide-white rounded outline-none shadow shadow-lg bg-green-800">
+                            <div class="flex divide-x-2 divide-white rounded outline-none shadow shadow-lg active">
                                 <div class="py-2 w-36">
                                     <button class="text-white text-sm pl-2"><a href="farm_location.html">Add Farm<span class="float-right pl-2"><img src="./images/farm/u401.svg" alt="add-icon"/></span></a></button>
                                 </div>
@@ -168,8 +168,12 @@
         }
         
         .active {
-            background-color: #176046;
+            background-color: #2f8d4b;
             color: #f1f1f1;
+        }
+        
+        .nav_color {
+            background-color: #2f8d4b;
         }
     </style>
     <script src="js/main.js"></script>
