@@ -128,14 +128,7 @@ function myFunction() {
     document.getElementById("demo").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 }
 
-//function for showing and hiding the delete field no. button
-const add = document.querySelector(".add");
-const farm = document.querySelector(".addFarm");
-
-
 // drop down to next page
-
-
 
 function la(src) {
 

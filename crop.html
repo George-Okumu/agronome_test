@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.15/tailwind.min.css"/>
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Crop</title>
 </head>
 </head>
@@ -83,18 +84,27 @@
     <table class="table-fixed w-full h-screen">
         <tr valign="top">
             <!--Left Menu-->
+           
             <td class="bg-gray-100 w-1/5">
                 <ul>
                     <li class="mx-4 my-4 text-green-900 hover:bg-gray-400">
-                        <a href="#">Farm</a> </li>
-                    <li class="mx-4 my-6 text-green-900 hover:bg-gray-400">
-                        <a href="#">Crop</a> </li>
-                    <li class="mx-4 my-8 text-green-900 hover:bg-gray-400">
-                        <a href="#">Soil</a> </li>
-                
+                        <a href="farm.html"><span class="float-left"><img src="images/farm/u326.svg" alt="farm"></span>
+                            <span class="pl-4">Farm</span>
+                        </a>
+                    </li>
+                    <li class="mx-4 my-4 text-green-900 hover:bg-gray-400">
+                        <a href="crop.html">
+                            <span class="float-left"> <img src="images/farm/u328.svg" alt="crop"></span><span class="pl-4">Crop</span>
+                        </a>
+                    </li>
+                    <li class="mx-4 my-4 text-green-900 hover:bg-gray-400 flex">
+                        <a href="soil.html"> <span class="float-left"><img src="images/farm/u332.svg" alt="Soil">
+                        </span><span class="pl-4">Soil</span></a>
+                    </li>
+                   
                 </ul>
-
             </td>
+
             <!--End of Lef Menu-->
             <!--Main (center) content-->
             <td class="bg-white">
@@ -113,7 +123,7 @@
                             </select>
                             <!--end of farm name-->
                             <!--Crop-->
-                            <select class="bg-transparent hover:bg-green-400 text-gray-500 text-sm py-2 px-4 inline-flex items-center shadow-lg w-36 border border-green-500 hover:border-transparent rounded my-4">
+                            <select class="bg-transparent hover:bg-green-800 text-gray-500 text-sm py-2 px-4 inline-flex items-center shadow-lg w-36 border border-green-500 hover:border-transparent rounded my-4">
                               <option>Crop A</option>
                               <option>Tomatoe</option>
                               <option>Tomatoe</option>
@@ -205,12 +215,15 @@
                                   
                             </div>
                             <div class="flex-1 -ml-8">
-                                <select class="bg-green-80 hover:bg-green-800 text-gray-500 text-sm py-2 px-6 inline-flex items-center shadow-lg w-30 border border-green-500 hover:border-transparent rounded" id="field-no">
-                                    <option>Variety ...</option>
+                                <var class="bg-green-80 hover:bg-green-800 text-gray-500 text-sm py-2 px-6 inline-flex items-center shadow-lg w-30 border border-green-500 hover:border-transparent rounded" id="field-no">
+                                    <button>
+                                        <h3 class="text-green-500 font-bold"><a href="variety.html">  Variety...</a></h3></button>
               
-                                  </select>
+                                    </var>
                                   
                             </div>
+                            
+                           
                         </div>
                     </div>
                 </div>
@@ -255,11 +268,14 @@
                                   </select>
                                   
                             </div>
+                            
+
                             <div class="flex-1 -ml-8">
-                                <select class="bg-green-80 hover:bg-green-800 text-gray-500 text-sm py-2 px-6 inline-flex items-center shadow-lg w-30 border border-green-500 hover:border-transparent rounded" id="field-no">
-                                    <option>Variety ...</option>
+                                <var class="bg-green-80 hover:bg-green-800 text-gray-500 text-sm py-2 px-6 inline-flex items-center shadow-lg w-30 border border-green-500 hover:border-transparent rounded" id="field-no">
+                                    <button>
+                                        <h3 class="text-green-500 font-bold"><a href="variety.html">  Variety...</a></h3></button>
               
-                                  </select>
+                                    </var>
                                   
                             </div>
                         </div>
@@ -305,20 +321,44 @@
                                   
                             </div>
                             <div class="flex-1 -ml-8">
-                                <select class="bg-green-80 hover:bg-green-800 text-gray-500 text-sm py-2 px-6 inline-flex items-center shadow-lg w-30 border border-green-500 hover:border-transparent rounded" id="field-no">
-                                    <option>Variety ...</option>
+                                <var class="bg-green-80 hover:bg-green-800 text-gray-500 text-sm py-2 px-6 inline-flex items-center shadow-lg w-30 border border-green-500 hover:border-transparent rounded" id="field-no">
+                                    <button>
+                                        <h3 class="text-green-500 font-bold"><a href="variety.html">  Variety...</a></h3></button>
               
-                                  </select>
+                                    </var>
                                   
                             </div>
+                            
                         </div>
                     </div>
                 </div>
+
+              
+                
                 <!--End of graphic Content-->
                 <!--Right side-->
                 <td class="bg-gray-100 w-1/5">
-                    <div class="border-solid border-4 border-light-green-500 h-28 w-48 mx-12 my-24">
-                        <p class="text-green-500 underline">Filter</p>
+                    <div class="flex mx-4 my-2">
+                       
+                        <div class="flex-1">
+                            <select class="bg-white-8 hover:bg-green-800 text-green-500 text-sm py-2 px-1 inline-flex items-center shadow-lg w-26 border border-green-500 hover:border-transparent rounded" id="field-no">
+                                <option>Field No:|</option>
+                                <option>Bungoma</option>
+                                <option>Nairobi</option>
+                                <option>Mombasa</option>
+                              </select>
+                        </div>
+                        <div class="flex-1">
+                        <select class="bg-white-8 hover:bg-green-800 text-green-500 text-sm py-2 px-1 inline-flex items-center shadow-lg w-24 border border-green-500 hover:border-transparent rounded" id="field-no">
+                            <option>Field Size:|acre</option>
+                            <option>Bungoma</option>
+                            <option>Nairobi</option>
+                            <option>Mombasa</option>
+                          </select>
+                        </div>
+                        </div>
+                    <!-- <div class="border-solid border-4 border-light-green-500 h-28 w-48? mx-12 my-24"> -->
+                        <h3 class="text-green-500 font-bold">Advance search<span class="underline"><a href="variety.html"> - (Variety)</a></h3>
                     </div>
                     <!--card 1-->
                     <div class="my-1">
@@ -405,7 +445,7 @@
         </tr>
 
     </table>
-    <script src="./js/crop.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
