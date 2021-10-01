@@ -85,16 +85,16 @@
             <tr valign="top">
                 <td class="bg-gray-100 w-1/5">
                     <ul>
-                        <li class="mx-4 my-4 text-green-900 hover:bg-gray-400">
+                        <li class="mx-4 my-6 text-green-900 hover:bg-gray-400">
                             <a href="farm.html"><span class="float-left"><img src="images/farm/u326.svg" alt="farm"></span>
                             <span class="pl-4">Farm</span>
                         </a>
                         </li>
-                        <li class="mx-4 my-4 text-green-900 hover:bg-gray-400 pt-8">
+                        <li class="mx-4 my-20 text-green-900 hover:bg-gray-400">
                             <a href="crop.html">
                                 <span class="float-left"> <img src="images/farm/u328.svg" alt="crop"></span><span class="pl-4">Crop</span></a>
                         </li>
-                        <li class="mx-4 my-4 text-green-900 hover:bg-gray-400 flex pt-10">
+                        <li class="mx-4 text-green-900 hover:bg-gray-400 flex">
                             <a href="soil.html"> <span class="float-left"><img src="images/farm/u332.svg" alt="soil"></span><span class="pl-4">Soil</span></a>
                         </li>
                     </ul>
@@ -109,10 +109,12 @@
                                 <div class="py-2 w-36">
                                     <button class="text-white text-sm pl-2"><a href="farm_location.html">Add Farm<span class="float-right pl-2"><img src="./images/farm/u401.svg" alt="add-icon"/></span></a></button>
                                 </div>
+                                <!--Dropdown to pick if farm exists-->
                                 <div class="pt-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                      </svg>
+                                    <select class="text-white bg-green-600 outline-none w-12" id="size">
+                                        <option value=""></option>
+                                        <option value="">No farm added</option>
+                                      </select>
                                 </div>
                             </div>
                         </div>

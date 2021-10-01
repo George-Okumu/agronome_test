@@ -82,16 +82,16 @@
             <tr valign="top">
                 <td class="bg-gray-100 w-1/5">
                     <ul>
-                        <li class="mx-4 my-4 text-green-900 hover:bg-gray-400">
+                        <li class="mx-4 my-6 text-green-900 hover:bg-gray-400">
                             <a href="farm.html"><span class="float-left"><img src="images/farm/u326.svg" alt="farm"></span>
                             <span class="pl-4">Farm</span>
                         </a>
                         </li>
-                        <li class="mx-4 my-4 text-green-900 hover:bg-gray-400 pt-28">
+                        <li class="mx-4 my-20 text-green-900 hover:bg-gray-400">
                             <a href="crop.html">
                                 <span class="float-left"> <img src="images/farm/u328.svg" alt="crop"></span><span class="pl-4">Crop</span></a>
                         </li>
-                        <li class="mx-4 my-4 text-green-900 hover:bg-gray-400 flex pt-10">
+                        <li class="mx-4 text-green-900 hover:bg-gray-400 flex">
                             <a href="soil.html"> <span class="float-left"><img src="images/farm/u332.svg" alt="soil"></span><span class="pl-4">Soil</span></a>
                         </li>
                     </ul>
@@ -103,13 +103,14 @@
                         <!--Add Farm Button-->
                         <div class="pl-8">
                             <div class="flex divide-x-2 divide-white rounded outline-none shadow shadow-lg active">
-                                <div class="py-2 w-36">
+                                <div class="py-2 w-32">
                                     <button class="text-white text-sm pl-2">Add Farm <span class="float-right pl-2"><img src="./images/farm/u401.svg" alt="add"/></span></button>
                                 </div>
                                 <div class="pt-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                      </svg>
+                                    <select class="text-white bg-green-600 outline-none w-12" id="size">
+                                        <option value=""></option>
+                                        <option value="">No farm added</option>
+                                      </select>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +126,7 @@
                             </div>
                         </div>
                         <!--AddCrop Button-->
-                        <div class="pr-4">
+                        <div class="pr-8">
                             <div class="flex divide-x divide-green-500 rounded outline-none border border-green-500">
                                 <div class="py-2 w-36">
                                     <button class="text-green-500 text-sm pl-2"><a href="crop.html"> Add Crop <span class="float-right pl-2"><img src="./images/farm/u351.svg" alt="add-icon"/></span></a></button>
@@ -139,7 +140,7 @@
                         </div>
                     </div>
                     <!--Step ProgressBar-->
-                    <div class="pt-8">
+                    <div class="pt-1">
                         <ul class="progress-bar">
                             <li class="progress-bar__dot full"></li>
                             <li class="progress-bar__connector"></li>
@@ -152,7 +153,7 @@
                     <div id="stepByStepForm">
                         <div class="step step1">
                             <!--Country Dropdown button-->
-                            <div class="flex justify-between pt-4">
+                            <div class="flex justify-between pt-0">
                                 <div class="pl-8">
                                     <div class="relative text-white focus-within:text-gray-400">
                                         <input class="shadow-2xl active border text-lg rounded w-44 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline placeholder-white" class="form-select" list="list" type="text" placeholder="County">
@@ -172,8 +173,8 @@
                                     </div>
                                 </div>
                                 <!--Constituency input-->
-                                <div class="">
-                                    <select class="bg-gray-400 text-white text-sm py-2 px-4 rounded w-48 outline-none">
+                                <div class="pl-2">
+                                    <select class="bg-gray-400 text-white text-sm py-2 px-6 rounded w-44 outline-none">
                                         <option>Constituency</option>
                                         <option value="uholo">uholo</option>
                                         <option value="kanduyi">Kanduyi</option>
@@ -181,7 +182,7 @@
                                       </select>
                                 </div>
                                 <!--Ward input-->
-                                <div class="pr-4">
+                                <div class="pr-8">
                                     <select class="bg-gray-400 text-white text-sm py-2 px-4 rounded w-44 outline-none">
                                         <option>Ward</option>
                                         <option value="bumala">Bumala</option>
@@ -235,7 +236,7 @@
                             <h3 class="text-green-500 uppercase underline font-bold">Advanced search<span>(optional)</span></h3>
                         </div>
                         <!--Inactive/Indicates the Sub County after the Constituency-->
-                        <div class="pt-32">
+                        <div class="pt-20">
                             <select class="text-green-500 bg-white outline-none w-full p-2">
                                 <option>Sub-County</option>
                                 <option value="mathayos">Mathayos</option>
