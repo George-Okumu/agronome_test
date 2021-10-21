@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <!--========Nav========-->
-    <nav class="nav_color shadow-lg">
-        <div class="max-w-8xl mx-auto px-4">
-            <div class="flex justify-between">
-                <div class="flex space-x-7">
-                    <div>
+    <div class="flex h-full">
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!--Nav Header-->
+            <nav class="flex justify-between items-center nav_color">
+                <div class="flex">
+                    <div class="px-8">
                         <!-- Website Logo -->
-                        <a href="http://aires.co.ke/" class="flex items-center py-4 px-2">
+                        <a href="http://aires.co.ke/">
                             <img src="./images/website_logo.svg" width="100px" />
                         </a>
                     </div>
@@ -28,8 +28,7 @@
                     <button class="outline-none">
                         <span class="sr-only">Notifications</span>
                         <!-- Heroicon name: outline/bell -->
-                        <svg width="20" height="27" xmlns="http://www.w3.org/2000/svg"><path d="M20 23v-2.3l-2.2-4.5v-5.9c0-3.7-2.6-6.9-6.2-7.7v-1C11.7.7 10.9 0 10 0c-.9 0-1.7.7-1.7 1.7v1c-3.6.8-6.2 4-6.2 7.7v5.9L0 20.7V23h5.4c.3 2.3 2.2 4 4.6 4 2.4 0 4.3-1.8 4.6-4H20zm-6.7-.1c-.3 1.6-1.6 2.8-3.3 2.8-1.7 0-3-1.2-3.3-2.8h6.6zm5.5-2v.8H1.3V21l2.2-4.5v-6.1c0-3.3 2.4-6.1 5.6-6.5l.5-.1V1.7c0-.2.2-.4.4-.4s.4.2.4.4v2.1h.6c3.2.5 5.6 3.3 5.6 6.5v6.1l2.2 4.5z" fill="#fff" fill-opacity=".996"/></svg>
-
+                        <img src="./images/farm/u370.svg" alt="bell"/>
                       </button>
                     <div class="p-2">
                         <button type="button" class="bg-green-500 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -38,135 +37,97 @@
                         </button>
                     </div>
                 </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="outline-none mobile-menu-button">
-                    <svg class=" w-6 h-6 text-gray-500 hover:text-white "
-                        x-show="!showMenu"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-                </div>
+            </nav>
+
+            <div class="flex h-full">
+                <!--Left Main-body Nav-->
+                <nav class="flex w-72 h-full bg-white border-r dark:bg-gray-800 dark:border-gray-600">
+                    <div class="w-full flex max-auto px-4">
+                        <ul class="mt-8">
+                            <li class="mx-4 text-green-900 hover:bg-gray-400">
+                                <a href="farm_location.html"><span class="float-left"><img src="images/farm/u326.svg" alt="farm"></span>
+                                <span class="pl-4 active_nav_button">Farm</span>
+                            </a>
+                            </li>
+                            <li class="mx-4 mt-10 text-green-900 hover:bg-gray-400">
+                                <a href="crop.html">
+                                    <span class="float-left"> <img src="images/farm/u328.svg" alt="crop"></span><span class="pl-4">Crop</span></a>
+                            </li>
+                            <li class="mx-4 mt-12 text-green-900 hover:bg-gray-400 flex">
+                                <a href="soil.html"> <span class="float-left"><img src="images/farm/u332.svg" alt="soil"></span><span class="pl-4">Soil</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--Main Content Body-->
+                <main class="w-full bg-white overflow-x-hidden overflow-y-hidden mb-14">
+                    <div class="w-full mx-auto px-6">
+                        <!--Upper Buttons-->
+                        <div class="px-0 mt-6">
+                            <div class="flex -mx-2">
+                                <div class="w-1/4 px-0">
+                                    <div class="relative w-64">
+                                        <button class="block active appearance-none w-full border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline hover:shadow-lg" type="button" onClick="window.location.href='./farm_location.html'"><span class="float-left">
+                                            <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg">
+                                                <g transform="matrix(1 0 0 1 -10 -10 )">
+                                                  <path d="M 10.7 9.4  L 20 9.4  L 20 10.7  L 10.6 10.7  L 10.6 20  L 9.4 20  L 9.4 10.6  L 0 10.6  L 0 9.4  L 9.4 9.4  L 9.4 0  L 10.7 0  L 10.7 9.4  Z " fill-rule="nonzero" fill="#fff" stroke="none" transform="matrix(1 0 0 1 10 10 )" />
+                                                </g>
+                                              </svg>
+                                        </span>Add Farm</button>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-white">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-1/4 px-44">
+                                    <div class="relative w-64">
+                                        <button class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline hover:shadow-lg" type="button" onclick="window.location.href='/build/field.html'"><span class="float-left"><img src="./images/farm/u351.svg" alt="add"/></span>Add Field</button>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-1/4 px-48">
+                                    <div class="relative w-64">
+                                        <button class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline hover:shadow-lg" type="button" onclick="window.location.href='/build/crop.html'"><span class="float-left"><img src="./images/farm/u351.svg" alt="add"/></span>Add Crop</button>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Logo and welcome note-->
+                        <div class="mt-44">
+                            <h2 class="text-center text-xl text-gray-900 font-bold tracking-wider my-8">Welcome</h2>
+                            <div class="flex justify-center">
+                                <img src="images/farm/u234.svg">
+                            </div>
+                            <h3 class="text-center text-l font-bold text-gray-900 tracking-wider my-8">Click&nbsp<span class="underline active_nav_button"><a href="farm_location.html">Farm</a></span>&nbspto get started</h3>
+                        </div>
+                    </div>
+                </main>
+                <!--Right Main-body nav-->
+                <nav class="flex w-72 h-full bg-white border-l dark:bg-gray-800 dark:border-gray-600">
+                    <div class="pt-6 px-6">
+                        <h3 class="font-bold">Continue to <span class="active_nav_button"><a href="profile.html">My profile</a></span> to complete registration</h3>
+                    </div>
+                </nav>
+
             </div>
+
         </div>
-        <!-- mobile menu -->
-        <div class="hidden mobile-menu">
-            <ul class="">
-                <li class="active">
-                    <a href="notifications.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
-                        <!-- Heroicon name: outline/bell -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="none" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="profile.html" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">
-                        <span class="sr-only">Open user menu</span>
-                        <img class="h-8 w-8 rounded-full" src="images/user_profile/u1363.svg" alt="My profile picture">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!--========End of Nav=====-->
 
-    <!--========Start of main body-->
-    <div class="container max-auto">
-        <table class="w-full h-screen table-fixed">
-
-            <tr valign="top">
-                <td class="bg-gray-100 w-1/5">
-                    <ul>
-                        <li class="mx-4 my-6 text-green-900 hover:bg-gray-400">
-                            <a href="farm.html"><span class="float-left"><img src="images/farm/u326.svg" alt="farm"></span>
-                            <span class="pl-4">Farm</span>
-                        </a>
-                        </li>
-                        <li class="mx-4 my-20 text-green-900 hover:bg-gray-400">
-                            <a href="crop.html">
-                                <span class="float-left"> <img src="images/farm/u328.svg" alt="crop"></span><span class="pl-4">Crop</span></a>
-                        </li>
-                        <li class="mx-4 text-green-900 hover:bg-gray-400 flex">
-                            <a href="soil.html"> <span class="float-left"><img src="images/farm/u332.svg" alt="soil"></span><span class="pl-4">Soil</span></a>
-                        </li>
-                    </ul>
-                </td>
-                <!--Content Center-->
-                <td class="bg-white" id="topButtons">
-                    <!--Top Buttons-->
-                    <div class="flex justify-between pt-4">
-                        <!--Add Farm Button-->
-                        <div class="pl-8">
-                            <div class="flex divide-x-2 divide-white rounded outline-none shadow shadow-lg active">
-                                <div class="py-2 w-36">
-                                    <button class="text-white text-sm pl-2"><a href="farm_location.html">Add Farm<span class="float-right pl-2"><img src="./images/farm/u401.svg" alt="add-icon"/></span></a></button>
-                                </div>
-                                <!--Dropdown to pick if farm exists-->
-                                <div class="pt-2">
-                                    <select class="text-white bg-green-600 outline-none w-12" id="size">
-                                        <option value=""></option>
-                                        <option value="">No farm added</option>
-                                      </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Add Field Button-->
-                        <div class="flex divide-x divide-green-500 rounded outline-none border border-green-500">
-                            <div class="py-2 w-36">
-                                <button class="text-green-500 text-sm pl-2">Add Fields <span class="float-right pl-2"><img src="./images/farm/u351.svg"/></span></button>
-                            </div>
-                            <div class="pt-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#168d4b">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                  </svg>
-                            </div>
-                        </div>
-                        <!--AddCrop Button-->
-                        <div class="pr-4">
-                            <div class="flex divide-x divide-green-500 rounded outline-none border border-green-500">
-                                <div class="py-2 w-36">
-                                    <button class="text-green-500 text-sm pl-2 outline-none"><a href="crop.html">Add Crop <span class="float-right pl-2"><img src="./images/farm/u351.svg"/></span></a></button>
-                                </div>
-                                <div class="pt-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#168d4b">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                                      </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pt-24">
-                        <div class="flex justify-center">
-                            <img src="images/farm/u234.svg">
-                        </div>
-                        <h2 class="text-center text-2xl font-bold underline text-green-700">Welcome</h2>
-                        <h3 class="text-center text-l font-bold text-green-500 pt-4">To get started, click on <span class="underline"><a href="farm_location.html">Add Farm</a></span></h3>
-                    </div>
-                </td>
-                <!--Right Side-->
-                <td class="bg-gray-100 w-1/5">
-                    <div class="pt-6 pl-4">
-                        <h3 class="text-green-500 font-bold">Continue to <span class="underline"><a href="profile.html">My profile</a></span> to complete registration</h3>
-                    </div>
-                </td>
-
-            </tr>
-
-            <table>
     </div>
 
     <style>
         body {
             font-family: 'Source Sans Pro', 'Trebuchet MS', Arial;
             font-size: 14px;
+        }
+        
+        .active_nav_button {
+            color: #2f8d4b;
         }
         
         .active {
