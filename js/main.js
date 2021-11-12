@@ -1,35 +1,12 @@
 //Dropdowmn
-window.addEventListener('DOMContentLoaded', () => {
-        const menuBtn = document.querySelector('#menu-btn')
-        const dropdown = document.querySelector('#dropdown')
+const menuBtn = document.querySelector('#menu-btn');
+const dropdown = document.querySelector('#dropdown');
 
-        menuBtn.addEventListener('click', () => {
-            dropdown.classList.toggle('hidden')
-            dropdown.classList.toggle('flex')
-        })
+menuBtn.addEventListener('click', () => {
+    dropdown.classList.toggle('hidden');
+    dropdown.classList.toggle('show');
+})
 
-    })
-    //For Phone Menus
-const btn = document.querySelector("button.mobile-menu-button");
-const menu = document.querySelector(".mobile-menu");
-const farm = document.querySelector(".addFarm");
-
-
-btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-});
-///////
-//For Active Buttons
-const topAddButtons = document.getElementById("topButtons");
-const activateButton = document.getElementsByClassName("btn");
-for (let i = 0; i < activateButton.length; i++) {
-    activateButton[i].addEventListener("click", function() {
-        let activeCurrent = document.getElementsByClassName("active");
-        activeCurrent[0].className = activeCurrent[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
-//
 //For Step Progress Bar
 const previousButton = document.getElementById("previous");
 const nextButton = document.getElementById("next");
