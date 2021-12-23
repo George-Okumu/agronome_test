@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farm Location Registration</title>
-    <!--Selectize js css link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -216,32 +214,32 @@
                             <h1 class="text-base font-semibold">Land Mark Search</h1>
                             <!--Market Search/list-->
                             <div class="pt-6">
-                                <select class="select-state" placeholder="Market">
-                                    <option value="">Market</option>
-                                    <option value="BR">Brian market</option>
-                                    <option value="GE">George Market</option>
-                                    <option value="KN">Ken's Market</option>
-                                  </select>
+                                <div class="flex border shadow rounded-lg">
+                                    <button class="flex items-center justify-center px-4">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                    </button>
+                                    <input type="text" class="px-2 py-2 w-full outline-none rounded-lg" placeholder="Market">
+                                </div>
 
                             </div>
                             <!--School search-->
                             <div class="pt-4">
-                                <select class="select-state" placeholder="School">
-                                    <option value="">School</option>
-                                    <option value="GE">George Primary</option>
-                                    <option value="WE">Wekesa secondary</option>
-                                    <option value="BR">Brian secondary</option>
-                                  </select>
+                                <div class="flex border shadow rounded-lg">
+                                    <button class="flex items-center justify-center px-4">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                    </button>
+                                    <input type="text" class="px-2 py-2 w-full outline-none rounded-lg" placeholder="School">
+                                </div>
                             </div>
 
                             <!--Health center Search/list-->
                             <div class="pt-4">
-                                <select class="select-state" placeholder="Health">
-                                    <option value="">Health</option>
-                                    <option value="KN">Ken's Facility</option>
-                                    <option value="BR">Brians's Facility</option>
-                                    <option value="WE">Wekesa's Facility</option>
-                                  </select>
+                                <div class="flex border shadow rounded-lg">
+                                    <button class="flex items-center justify-center px-4">
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-4 h-4"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                    </button>
+                                    <input type="text" class="px-2 py-2 w-full outline-none rounded-lg" placeholder="Health Center">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -267,11 +265,7 @@
             color: #f1f1f1;
         }
     </style>
-    <!--Selectize js-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
-    <!--Main js-->
-    <script src="js/selectize.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 

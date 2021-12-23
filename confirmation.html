@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Layout</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="font-sans">
+    <div class="flex h-full">
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!--Nav Header-->
+            <nav class="flex justify-between items-center nav_color" style="background: #2f8d4b;;">
+                <div class="flex">
+                    <div class="px-4 m-4">
+                        <!-- Website Logo -->
+                        <a href="http://aires.co.ke/">
+                            <img src="./images/website_logo.svg" width="100px" />
+                        </a>
+                    </div>
+
+                </div>
+                <!-- Right Navbar items -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <button class="outline-none">
+                        <span class="sr-only">Notifications</span>
+                        <!-- Heroicon name: outline/bell -->
+                        <img src="./images/farm/u370.svg" alt="bell"/>
+                      </button>
+                    <div class="p-2">
+                        <button type="button" class="bg-green-500 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="h-8 w-8 rounded-full" src="images/user_profile/u1363.svg" alt="My profile picture">
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="flex h-full">
+                <!--Left Main-body Nav-->
+                <nav class="flex w-72 h-full bg-white border-r dark:bg-gray-800 dark:border-gray-600">
+                    <div class="w-full flex max-auto pl-8">
+                        <ul class="w-full">
+                            <li class="pt-8 hover:shadow-lg">
+                                <a href="farm.html"><span class="float-left"><img src="images/farm/u326.svg" alt="farm"></span>
+                                <span class="pl-4 active_nav_button">Farm</span>
+                            </a>
+                            </li>
+                            <li class="pt-10 text-gray-900 hover:shadow-lg">
+                                <a href="crop.html">
+                                    <span class="float-left"> <img src="images/farm/u328.svg" alt="crop"></span><span class="pl-4">Crop</span></a>
+                            </li>
+                            <li class="pt-12 text-gray-900 hover:shadow-lg">
+                                <a href="soil.html"> <span class="float-left pt-2"><img src="images/farm/u332.svg" alt="soil"></span><span class="pl-4">Soil</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container max-w-full">
+                    <!--Main Content Body-->
+                    <main class="w-full bg-white overflow-x-hidden overflow-y-hidden mb-14">
+                        <div class="w-full mx-auto px-6">
+                            <form action="farm_layout.html">
+                                <!--First Upper Buttons-->
+                                <div class="px-0 mt-6">
+                                    <div class="flex">
+                                        <div class="w-1/2">
+                                            <div class="relative w-64">
+                                                <select class="block appearance-none w-full nav_color text-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
+                                                <option value="">Tanui</option>
+                                                <option value="">Farm</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="w-1/2">
+                                            <div class="relative w-64">
+                                                <select class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
+                                                <option value="">2</option>
+                                              </select>
+                                                <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
+                                                    acres
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <div class="relative w-64">
+                                                <button class="block appearance-none w-full bg-white border  px-4 py-2 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline hover:shadow-lg" type="button" onclick="window.location.href='/build/crop.html'"><span class="float-left"><img src="./images/farm/u351.svg" alt="add"/></span><span class="pr-36 text-gray-700">10</span></button>
+                                                <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
+                                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!--3rd btn-->
+                                <div class="px-0 mt-20">
+                                    <div class="flex">
+                                        <!--Farming Type-->
+                                        <div class="w-1/2">
+                                            <div class="relative w-64">
+                                                <select class="block appearance-none w-full bg-white border my-4 px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" style="background: #2f8d4b;">
+                                              <option>Soil test</option>
+                                              <option value="">Physical</option>
+                                              <option value="">Acidic</option>
+                                            </select>
+                                                <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
+                                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Field Number-->
+                                        <div class="w-1/2">
+                                            <div class="relative w-64">
+                                                <div class="mt-4">
+                                                    <div class="relative w-full">
+                                                        <input class="block appearance-none w-full bg-white text-gray-700 border  px-4 py-2 pr-1 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Date" onfocus="(this.type='date')" required>
+                                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                              </svg> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!--Field Size-->
+                                        <div class="">
+                                            <div class="relative w-64">
+                                                <select class="block appearance-none w-full bg-white border  px-4 my-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" onchange="la(this.value)">
+                                                    <option style="background-image:url(./images/farm/u274.svg);">Soil Type</option>
+                                                    <option value="">Physical</option>
+                                                    <option value="">Scitific</option>
+                                                  </select>
+                                                <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
+                                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Graphic area-->
+                                    <div class="bg-white-100 h-96 w-full mx-2 my-6 overflow-y-auto " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                                        <div class="my-12">
+                                            <p class="ml-20"><strong>Test Type:</strong> Physical</p><br>
+                                            <p class="ml-20"><strong>Test Name:   </strong> Throw Ball</p><br>
+                                            <p class="ml-20"><strong>Test Date:    </strong> 20/10/2021</p><br>
+                                            <p class="ml-20"><strong>Location:</strong> Tonoi</p><br>
+                                            <p class="ml-20"><strong>Test Purpose: </strong> Physical</p><br>
+                                            <p class="ml-20"><strong>Test Requeriement</strong> Physical</p><br>
+                                            <p class="ml-20"><strong>Test Type:</strong> Physical</p>
+
+                                        </div>
+                                        <button class="bg-transparent hover:bg-green-500 text-green-700 font-semibold text-sm hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded underline w-72 float-right">
+                                            Click here to Proceed
+                                            </button>
+                                    </div>
+
+
+                    </main>
+
+                    </div>
+                    <!--Right Main-body nav-->
+                    <nav class="flex w-72 h-full bg-white border-l dark:bg-gray-800 dark:border-gray-600">
+                        <div class="px-0">
+                            <div class="px-4 my-8">
+                                <div class="mt-4">
+                                    <h3 class="font-bold text-green-500 uppercase">More Information</h3>
+                                </div>
+
+                                <div class="mt-4">
+                                    <div class="relative w-full">
+                                        <select class="block appearance-none w-full nav_color text-white border  my-8 px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" name="season" required>
+                                            <option value="">Report</option>
+                                            <option value="rain">1</option>
+                                            <option value="drought">2</option>
+                                          </select>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-white">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white h-64 w-3/4 m-6" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                                    <p class="text-xs" id="summary"></p>
+                                    <p class="text-xs" id="demo1"></p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </nav>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <style>
+                .active_nav_button {
+                    color: white;
+                }
+                
+                .nav_color {
+                    background-color: white;
+                    color: black;
+                }
+                
+                .active {
+                    background-color: white;
+                    color: #f1f1f1;
+                }
+            </style>
+            <script src="js/main.js"></script>
+
+            <script>
+                $(document).ready(function() {
+                    var currentGfgStep, nextGfgStep, previousGfgStep;
+                    var opacity;
+                    var current = 1;
+                    var steps = $("fieldset").length;
+
+                    setProgressBar(current);
+
+                    $(".next-step").click(function() {
+
+                        currentGfgStep = $(this).parent();
+                        nextGfgStep = $(this).parent().next();
+
+                        $("#progressbar li").eq($("fieldset")
+                            .index(nextGfgStep)).addClass("active");
+
+                        nextGfgStep.show();
+                        currentGfgStep.animate({
+                            opacity: 0
+                        }, {
+                            step: function(now) {
+                                opacity = 1 - now;
+
+                                currentGfgStep.css({
+                                    'display': 'none',
+                                    'position': 'relative'
+                                });
+                                nextGfgStep.css({
+                                    'opacity': opacity
+                                });
+                            },
+                            duration: 500
+                        });
+                        setProgressBar(++current);
+                    });
+
+                    $(".previous-step").click(function() {
+
+                        currentGfgStep = $(this).parent();
+                        previousGfgStep = $(this).parent().prev();
+
+                        $("#progressbar li").eq($("fieldset")
+                            .index(currentGfgStep)).removeClass("active");
+
+                        previousGfgStep.show();
+
+                        currentGfgStep.animate({
+                            opacity: 0
+                        }, {
+                            step: function(now) {
+                                opacity = 1 - now;
+
+                                currentGfgStep.css({
+                                    'display': 'none',
+                                    'position': 'relative'
+                                });
+                                previousGfgStep.css({
+                                    'opacity': opacity
+                                });
+                            },
+                            duration: 500
+                        });
+                        setProgressBar(--current);
+                    });
+
+                    function setProgressBar(currentStep) {
+                        var percent = parseFloat(100 / steps) * current;
+                        percent = percent.toFixed();
+                        $(".progress-bar")
+                            .css("width", percent + "%")
+                    }
+
+                    $(".submit").click(function() {
+                        return false;
+                    })
+                });
+
+                // quiz
+                function showHideDiv(ele) {
+                    var srcElement = document.getElementById(ele);
+                    if (srcElement != null) {
+                        if (srcElement.style.display == "block") {
+                            srcElement.style.display = 'none';
+                        } else {
+                            srcElement.style.display = 'block';
+                        }
+                        return false;
+                    }
+                }
+
+                // slides
+                function showSlides(ele) {
+                    var srcElement = document.getElementById(ele);
+                    if (srcElement != null) {
+                        if (srcElement.style.display == "block") {
+                            srcElement.style.display = 'none';
+                        } else {
+                            srcElement.style.display = 'block';
+                        }
+                        return false;
+                    } else {
+                        srcElement.style.display = 'block';
+                    }
+                    return false;
+                }
+
+                //summary
+                function mySummary() {
+                    document.getElementById("summary").innerHTML = "Requirements : A handful of soil as a sample";
+                }
+
+                //fall apart
+                function fallApart() {
+                    document.getElementById("apart").innerHTML = "Please choose result in the above button";
+                }
+
+                function stick() {
+                    document.getElementById("apart").innerHTML = "Please choose result in the above button";
+                }
+
+                // Left pan
+                function myLeftpan() {
+                    //var x = document.getElementById("mySelect").value;
+                    document.getElementById("demo").innerHTML = "If fallen apart, likely high sand content <br> <br> If stuck together, relatively highclay content";
+                }
+
+                // more info
+                function myFunction() {
+                    document.getElementById("demo1").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+                }
+            </script>
+</body>
+
+</html>
+
+</html>
