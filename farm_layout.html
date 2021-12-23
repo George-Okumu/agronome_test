@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
-<body>
+<body class="font-sans">
     <div class="flex h-full">
         <div class="flex-1 flex flex-col overflow-hidden">
             <!--Nav Header-->
             <nav class="flex justify-between items-center nav_color">
                 <div class="flex">
-                    <div class="px-8">
+                    <div class="px-4 m-4">
                         <!-- Website Logo -->
                         <a href="http://aires.co.ke/">
                             <img src="./images/website_logo.svg" width="100px" />
@@ -30,10 +30,17 @@
                         <img src="./images/farm/u370.svg" alt="bell"/>
                       </button>
                     <div class="p-2">
-                        <button type="button" class="bg-green-500 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                            <span class="sr-only">Open user menu</span>
+                        <button id="menu-btn" class="bg-green-500 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                             <img class="h-8 w-8 rounded-full" src="images/user_profile/u1363.svg" alt="My profile picture">
                         </button>
+                        <div id="dropdown" class="absolute hidden right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                            <div class="px-2 py-2 bg-white rounded-md shadow">
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="#">Edit Profile</a>
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="#">Log out</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -41,199 +48,244 @@
             <div class="flex h-full">
                 <!--Left Main-body Nav-->
                 <nav class="flex w-72 h-full bg-white border-r dark:bg-gray-800 dark:border-gray-600">
-                    <div class="w-full flex max-auto mx-8">
+                    <div class="w-full flex max-auto pl-8">
                         <ul class="w-full">
-                            <li class="mt-8 hover:shadow-lg">
+                            <li class="pt-8 hover:shadow-lg">
                                 <a href="farm.html"><span class="float-left"><img src="images/farm/u326.svg" alt="farm"></span>
                                 <span class="pl-4 active_nav_button">Farm</span>
                             </a>
                             </li>
-                            <li class="mt-10 text-gray-900 hover:shadow-lg">
+                            <li class="pt-10 text-gray-900 hover:shadow-lg">
                                 <a href="crop.html">
                                     <span class="float-left"> <img src="images/farm/u328.svg" alt="crop"></span><span class="pl-4">Crop</span></a>
                             </li>
-                            <li class="mt-12 text-gray-900 hover:shadow-lg">
-                                <a href="soil.html"> <span class="float-left"><img src="images/farm/u332.svg" alt="soil"></span><span class="pl-4">Soil</span></a>
+                            <li class="pt-12 text-gray-900 hover:shadow-lg">
+                                <a href="soil.html"> <span class="float-left pt-2"><img src="images/farm/u332.svg" alt="soil"></span><span class="pl-4">Soil</span></a>
                             </li>
                         </ul>
                     </div>
                 </nav>
-                <!--Main Content Body-->
-                <main class="w-full bg-white overflow-x-hidden overflow-y-hidden mb-14">
-                    <div class="w-full mx-auto px-6">
-                        <!--Upper Buttons-->
-                        <div class="px-0 mt-6">
-                            <div class="flex">
-                                <!--Farm Name Display-->
-                                <div class="w-1/4 px-0">
-                                    <div class="relative w-64">
-                                        <select class="block appearance-none w-full nav_color text-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
-                                            <option value="">Maize Farm</option>
-                                            <option value="">Bean Farm</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <!--Farm Size Layout-->
-                                <div class="w-1/4 px-36">
-                                    <div class="relative w-64">
-                                        <select class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
-                                          <option value="">10</option>
-                                        </select>
-                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
-                                            acres
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-1/4 px-56">
-                                    <div class="relative w-64">
-                                        <button class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline hover:shadow-lg" type="button" onclick="window.location.href='/build/crop.html'"><span class="float-left"><img src="./images/farm/u351.svg" alt="add"/></span>Add Crop</button>
-                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
-                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Step ProgressBar-->
-                        <div class="mt-8">
-                            <div class="w-full">
-                                <div class="flex">
-                                    <div class="w-1/3">
-                                        <div class="relative mb-2">
-                                            <div class="w-5 h-5 mx-auto nav_color rounded-full flex items-center">
-                                                <span class="text-center text-white w-full">
-                                        </span>
-                                            </div>
-                                        </div>
-
-                                        <div class="text-xs text-center md:text-base">Farm Location</div>
-                                    </div>
-
-
-                                    <div class="w-1/3">
-                                        <div class="relative mb-2">
-                                            <div class="absolute flex align-center items-center align-middle content-center" style="width: calc(100% - 0.0rem - 1rem); top: 40%; transform: translate(-50%, -50%)">
-                                                <div class="w-full nav_color rounded items-center align-middle align-center flex-1">
-                                                    <div class="w-0 nav_color pt-1 rounded" style="width: 100%;"></div>
+                <div class="container max-w-full">
+                    <!--Main Content Body-->
+                    <main class="w-full bg-white overflow-x-hidden overflow-y-hidden mb-14">
+                        <div class="w-full mx-auto px-6">
+                            <form action="farm_layout.html">
+                                <!--First Upper Buttons-->
+                                <div class="px-0 mt-6">
+                                    <div class="flex">
+                                        <div class="w-1/2">
+                                            <div class="relative w-64">
+                                                <select class="block appearance-none w-full bg-white text-gray-700 border px-4 py-2 pr-8 rounded-lg leading-tight focus:outline-none focus:shadow-outline">
+                                                    <option value="">Maize Farm</option>
+                                                    <option value="">Bean Farm</option>
+                                                </select>
+                                                <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
+                                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                                                 </div>
                                             </div>
-
-                                            <div class="w-5 h-5 mx-auto nav_color border-0 rounded-full flex items-center">
-                                                <span class="text-center w-full">
-                                        </span>
-                                            </div>
                                         </div>
-
-                                        <div class="text-xs text-center md:text-base">Farm Details</div>
-                                    </div>
-
-                                    <div class="w-1/3">
-                                        <div class="relative mb-2">
-                                            <div class="absolute flex align-center items-center align-middle content-center" style="width: calc(100% - 0rem - 1rem); top: 40%; transform: translate(-50%, -50%)">
-                                                <div class="w-full rounded items-center align-middle align-center flex-1">
-                                                    <div class="w-0 nav_color pt-1 rounded" style="width: 100%;"></div>
+                                        <div class="w-1/2">
+                                            <div class="relative w-64">
+                                                <select class="block appearance-none w-full nav_color bg-white border text-white px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
+                                                    <option value="">10</option>
+                                                  </select>
+                                                <div class="pointer-events-none absolute inset-y-0 right-0 border-l text-white flex items-center px-2">
+                                                    acres
                                                 </div>
                                             </div>
-
-                                            <div class="w-5 h-5 mx-auto nav_color border-0 rounded-full flex items-center">
-                                                <span class="text-center w-full">
-                                        </span>
+                                        </div>
+                                        <div class="">
+                                            <div class="relative w-64">
+                                                <button class="block appearance-none w-full bg-white border  px-4 py-2 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" type="button" onclick="window.location.href='/build/crop.html'"><span class="float-left"><img src="./images/farm/u351.svg" alt="add"/></span><span class="pr-36 text-gray-700">Crop</span></button>
+                                                <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
+                                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="text-xs text-center active_nav_button md:text-base">Farm Layout</div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!--Upper Second  Buttons-->
-                        <div class="px-0 mt-6">
-                            <div class="flex">
-                                <!--Farming Type-->
-                                <div class="w-1/4 px-0">
-                                    <div class="relative w-64">
-                                        <select class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
+
+                                <!--Step ProgressBar-->
+                                <div class="p-5">
+                                    <div class="mx-20 p-2">
+                                        <div class="flex items-center">
+                                            <div class="flex items-center relative">
+                                                <div class="rounded-full transition duration-500 ease-in-out h-7 w-7 py-3 border-2 nav_color">
+                                                </div>
+                                                <div class="absolute top-0 -ml-10 text-center mt-6 w-32 text-normal font-medium active_nav_button">
+                                                    Location
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto border-t-2 border-green-500"></div>
+                                            <div class="flex items-center active_nav_button relative">
+                                                <div class="rounded-full transition duration-500 ease-in-out h-7 w-7 py-3 border-2 nav_color">
+                                                </div>
+                                                <div class="absolute top-0 -ml-10 text-center mt-6 w-32 text-normal font-medium active_nav_button">
+                                                    Details
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto border-t-2 transition duration-500 ease-in-out border-green-500"></div>
+                                            <div class="flex items-center active_nav_button relative">
+                                                <div class="rounded-full transition duration-500 ease-in-out h-7 w-7 py-3 border-2 nav_color">
+                                                </div>
+                                                <div class="absolute top-0 -ml-10 text-center mt-6 w-32 text-normal font-medium active_nav_button">
+                                                    Layout
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Upper Second  Buttons-->
+                                <div class="px-0 mt-2">
+                                    <div class="flex">
+                                        <!--Farming Type-->
+                                        <div class="w-1/2">
+                                            <div class="relative w-64">
+                                                <select class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-xl shadow leading-tight focus:outline-none focus:shadow-outline">
                                           <option>Farming Type</option>
                                           <option value="">Mono</option>
                                           <option value="">Mixed Farming</option>
                                         </select>
-                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
-                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                                <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
+                                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Field Number-->
+                                        <div class="w-1/2">
+                                            <div class="relative w-64">
+                                                <div>
+                                                    <input class="block appearance-none w-full bg-white text-gray-700 border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" type="number" placeholder="Field Number">
+                                                </div>
+                                                <div>
+                                                    <select class="absolute appearance-none rounded-r-xl bg-transparent border-l inset-y-0 right-0 outline-none flex items-center px-2 text-gray-900">
+                                                        <option>acres</option>
+                                                        <option value="acres">acres</option>
+                                                        <option value="ha">ha</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Autogenerated Field no area and Add Button-->
+                                        <div class="">
+                                            <div class="relative w-64">
+                                                <div>
+                                                    <p class="block appearance-none w-full bg-white border px-4 py-2 pr-8 rounded-xl shadow leading-tight focus:outline-none focus:shadow-outline">
+                                                        <span class="float-left"><img src="./images/farm/u351.svg" alt="add"/></span><span class="pl-2 text-gray-700">TonuiField:2</span>
+                                                    </p>
+                                                </div>
+                                                <div class="">
+                                                    <button class="absolute appearance-none text-white rounded-r-xl nav_color border-l inset-y-0 right-0 outline-none flex items-center px-2" type="submit">
+                                                        Add
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!--Field Number-->
-                                <div class="w-1/4 px-36">
-                                    <div class="relative w-64">
-                                        <select class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
-                                          <option style="background-image:url(./images/farm/u274.svg);">Field Number</option>
-                                          <option value="">34 acres</option>
-                                          <option value="">20 ha</option>
-                                        </select>
-                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
-                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+
+                                    <!--Farm usage progress state-->
+                                    <div class="mt-4">
+                                        <p class="font-bold text-l"> 8 acres of 10 used.</p>
+                                        <div class="relative pt-1 w-full">
+                                            <div class="overflow-hidden h-2 text-xs flex shadow-md bg-gray-100 rounded-full bg-white">
+                                                <div style="width:80%" class="flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!--Field Size-->
-                                <div class="w-1/4 px-56">
-                                    <div class="relative w-64">
-                                        <select class="block appearance-none w-full bg-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
-                                          <option>Field Size</option>
-                                          <option value="">34 acres</option>
-                                          <option value="">20 ha</option>
-                                        </select>
-                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-gray-700">
-                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+
+                                    <!--Doughnut Chart-->
+                                    <div class="border border-gray-200 border-b-4 rounded-lg border-t-0 mt-6">
+                                        <div class="flex justify-evenly">
+                                            <!--Table for displaying Field Size, name and number-->
+                                            <div class="flex flex-col pt-10">
+                                                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                                                        <div class="overflow-hidden">
+                                                            <table class="min-w-full">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col" class="px-6 py-3 text-left font-medium text-gray-900">
+                                                                            Farm Id
+                                                                        </th>
+                                                                        <th scope="col" class="px-6 py-3 text-left font-medium text-gray-900">
+                                                                            Farm Name
+                                                                        </th>
+                                                                        <th scope="col" class="px-6 py-3 text-left font-medium text-gray-900">
+                                                                            Farm Size
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="px-6 py-4">
+                                                                            <div class="flex items-center">
+                                                                                <div>
+                                                                                    <div class="font-medium text-gray-500">
+                                                                                        #00345
+                                                                                    </div>
+                                                                                    <div class="font-medium text-gray-500">
+                                                                                        #00346
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="px-6 py-4">
+                                                                            <div class="text-gray-500">Tonui: Field 1</div>
+                                                                            <div class="text-gray-500">Tonui: Field 2</div>
+                                                                        </td>
+                                                                        <td class="px-6 py-4 text-gray-500">
+                                                                            <div class="text-gray-500">5 acres</div>
+                                                                            <div class="text-gray-500">3 acres</div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--The chart section-->
+                                            <div class="w-1/4">
+                                                <canvas id="doughnut_chart"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="pl-6 pb-6 lg:mx-20 sm:mx-2">
+                                            <button class="bg-transparent hover:bg-gray-100 border border-green-500 text-green-500 font-bold p-1 px-6 rounded" type="reset">Reset</button>
                                         </div>
                                     </div>
+
+
+                                    <!--Previous and Save buttons-->
+                                    <div class="flex justify-between mt-4">
+                                        <button class="bg-transparent hover:bg-gray-100 border border-green-500 text-green-500 font-bold p-1 px-6 rounded">
+                                        <a href="farm_details.html">Back</a>
+                                    </button>
+                                        <button class="bg-transparent hover:bg-gray-100 border border-green-500 text-green-500 font-bold p-1 px-6 rounded" type="submit">
+                                        Save
+                                    </button>
+                                    </div>
+
                                 </div>
-                            </div>
+                            </form>
                         </div>
+                    </main>
 
-                        <!--Farm usage progress state-->
-                        <div class="mt-4">
-                            <p class="font-bold text-l"> 5 acres of 10 used.</p>
-                            <div class="relative pt-1 w-full">
-                                <div class="overflow-hidden h-2 text-xs flex shadow-md bg-gray-100 rounded-full bg-white">
-                                    <div style="width:50%" class="flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Map Place-->
-                        <div class="mt-6">
-                            <div class="gmap_canvas"><iframe width="100%" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Kenya&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br>
-                            </div>
-                        </div>
-
-                        <!--Previous and Save buttons-->
-                        <div class="flex justify-between mt-1">
-                            <button class="bg-transparent hover:bg-gray-100 border border-green-500 text-green-500 font-bold py-2 px-6 rounded">
-                                <a href="farm_details.html">Back</a>
-                            </button>
-                            <button class="bg-transparent hover:bg-gray-100 border border-green-500 text-green-500 font-bold py-2 px-6 rounded" type="submit">
-                                Save
-                            </button>
-                        </div>
-
-                    </div>
-                </main>
+                </div>
                 <!--Right Main-body nav-->
-                <nav class="flex w-96 h-full bg-white border-l dark:bg-gray-800 dark:border-gray-600">
+                <nav class="flex w-72 h-full bg-white border-l dark:bg-gray-800 dark:border-gray-600">
                     <div class="px-0">
                         <div class="px-6">
                             <div class="mt-8">
-                                <h3 class="font-bold text-green-500 px-4 uppercase">More Information</h3>
+                                <h3 class="font-bold text-green-500 uppercase">More Information</h3>
                             </div>
 
                             <!--County/ Constituency details should be displayed after user registration of location-->
                             <div class="w-44 mt-7">
-                                <p class="block appearance-none w-full bg-white border  px-8 py-2 pr-0 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">Busia</p>
+                                <p class="block appearance-none w-full px-8 py-2 pr-0 leading-tight focus:outline-none focus:shadow-outline">Busia</p>
                             </div>
-                            <div class="w-44 mt-12">
-                                <p class="block appearance-none w-full bg-white border  px-8 py-2 pr-0 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">Matayos</p>
+                            <div class="w-44 mt-7">
+                                <p class="block appearance-none w-full px-8 py-2 pr-0 leading-tight focus:outline-none focus:shadow-outline">Matayos</p>
                             </div>
                         </div>
                         <!--======Farming History-->
@@ -244,61 +296,67 @@
                             <form class="px-6">
                                 <!--Last Season-->
                                 <div class="mt-4">
-                                    <div class="relative w-48">
-                                        <select class="block appearance-none w-full nav_color text-white border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
-                                          <option>Season</option>
-                                          <option value="">Rainy</option>
-                                          <option value="">Drought</option>
-                                        </select>
+                                    <div class="relative w-full">
+                                        <select class="block appearance-none w-full nav_color text-white border px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" name="season" required>
+                                                <option value=" ">Season</option>
+                                                <option value="rain">Rainy</option>
+                                                <option value="drought">Drought</option>
+                                              </select>
                                         <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2 text-white">
-                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                            <svg class="fill-current h-4 w-4 " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 20 20 "><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Crop grown last season-->
-                                <div class="mt-2">
-                                    <input class="appearance-xl w-48  rounded-lg border bg-white py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="farm-size" type="text" placeholder="Crop grown">
+                                <div class="mt-4">
+                                    <input class="w-full rounded-lg border bg-white py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="farm-size" type="text" placeholder="Crop grown" required>
                                 </div>
                                 <!--Estimated Area grown-->
-                                <div class="mt-2">
-                                    <div class="relative w-48">
-                                        <select class="block appearance-none w-full bg-white border text-gray-400 px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline">
-                                          <option>Estimated area grown</option>
-                                          <option value="">34 acres</option>
-                                          <option value="">20 ha</option>
-                                        </select>
-                                        <div class="pointer-events-none absolute inset-y-0 right-0 border-l flex items-center px-2">
-                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                <div class="mt-4">
+                                    <div class="relative w-full">
+                                        <select class="block appearance-none w-52 text-gray-400 bg-white border px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" name="area_grown" required>
+                                                <option value="">Estm area grown</option>
+                                                <option value="3">3</option>
+                                                <option value="20">20</option>
+                                              </select>
+                                        <!-- <input class="block appearance-none w-full bg-white text-gray-700 border px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline " type="number " placeholder="Field Size "> -->
+                                        <div>
+                                            <select class="absolute appearance-none rounded-r-lg bg-transparent border-l inset-y-0 right-0 outline-none flex items-center px-2 text-gray-400" required>
+                                                    <option value="">acres</option>
+                                                    <option value="acres">acres</option>
+                                                    <option value="ha">hac</option>
+                                                </select>
                                         </div>
                                     </div>
                                 </div>
                                 <!--Planting date-->
-                                <div class="mt-2">
-                                    <div class="relative w-48">
-                                        <input class="block appearance-none w-full bg-white text-gray-700 border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Planting Date" onfocus="(this.type='date')">
-                                        <div class="pointer-events-none absolute inset-y-0 right-7 flex items-center px-2 text-gray-400">
+                                <div class="mt-4">
+                                    <div class="relative w-full">
+                                        <input class="block appearance-none w-full bg-white text-gray-700 border px-4 py-2 pr-1 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Planting Date" onfocus="(this.type='date' )" required>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                <path stroke-linecap="round " stroke-linejoin="round" stroke-width="2 " d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z " />
                                               </svg> </div>
                                     </div>
                                 </div>
                                 <!--Harvesting Date-->
-                                <div class="mt-2">
-                                    <div class="relative w-48">
-                                        <input class="block appearance-none w-full bg-white text-gray-700 border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Harvesting Date" onfocus="(this.type='date')">
-                                        <div class="absolute inset-y-0 right-7 flex items-center px-2 text-gray-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                <div class="mt-4">
+                                    <script src="js/main.js"></script>
+                                    <div class="relative w-full">
+                                        <input class="block appearance-none w-full bg-white text-gray-700 border px-4 py-2 pr-1 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Harvesting Date" onfocus="(this.type='date' )" required>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg " class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round " stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                               </svg> </div>
                                     </div>
                                 </div>
                                 <!--Estimated Yield of previous harvest-->
-                                <div class="mt-2">
-                                    <div class="relative w-48">
-                                        <input class="block appearance-none w-full bg-white text-gray-700 border  px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" type="number" placeholder="Estm Yield">
-                                        <div class="">
-                                            <select class="absolute appearance-none rounded-r-lg bg-transparent border-l inset-y-0 right-0 outline-none flex items-center px-2 text-gray-400">
-                                                <option>weight</option>
+                                <div class="mt-4">
+                                    <div class="relative w-full">
+                                        <input class="block appearance-none w-full bg-white text-gray-700 border px-4 py-2 pr-8 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline" type="number" placeholder="Estm Yield" required>
+                                        <div>
+                                            <select class="absolute appearance-none rounded-r-lg bg-transparent border-l inset-y-0 right-0 outline-none flex items-center px-2 text-gray-400" required>
+                                                <option value="">weight</option>
                                                 <option value="g">Kg</option>
                                                 <option value="tonnes">Tonnes</option>
                                                 <option value="grammes">Grammes</option>
@@ -306,8 +364,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mt-4">
-                                    <button class="bg-white border border-green-200 hover:shadow-lg text-gray-900 py-2 px-4 rounded-lg w-48 focus:outline-none focus:shadow-outline" type="button">
+                                <div class="mt-7">
+                                    <button class="bg-white border border-green-200 hover:shadow-lg text-gray-900 py-2 px-4 rounded-lg w-48 focus:outline-none focus:shadow-outline" type="submit">
                                         <span class="pl-2 float-left"><img src="./images/farm/u351.svg" alt="add"/></span>
                                         Add Crop Record
                                       </button>
@@ -326,16 +384,6 @@
     </div>
 
     <style>
-        body {
-            font-family: 'Source Sans Pro', 'Trebuchet MS', Arial;
-            font-size: 14px;
-        }
-        
-        .active {
-            background-color: #176046;
-            color: #f1f1f1;
-        }
-        
         .active_nav_button {
             color: #2f8d4b;
         }
@@ -349,9 +397,10 @@
             color: #f1f1f1;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+    <script src="js/doughnut_chart.js"></script>
 
-</html>
+</body>
 
 </html>
